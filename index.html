@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junaid Shaik Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- For icons -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: rgb(161, 146, 146);
+      line-height: 1.6;
+      background-image: linear-gradient(135deg, rgb(0, 0, 0), rgba(11, 11, 11, 0.738));
+    }
+    header {
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons i {
+      margin: 0 10px;
+      font-size: 20px;
+    }
+
+    /* Tooltip for GitHub */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      background-color: #333;
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      transition: opacity 0.3s;
+      z-index: 1;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .about-text {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1em;
+    }
+    .skills-grid, .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      justify-items: center;
+      margin-top: 60px;
+    }
+    .skills-grid img, .tools-grid img {
+      width: 80px;
+      height: 80px;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px;
+      font-size: 1em;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(62, 58, 58);
+    }
+
+    h1:hover,h2:hover,h3:hover,h4:hover,p:hover {
+      color: white;
+    }
+
+    h1, h2, h3, h4, p {
+      transition: color 0.3s ease;
+    }
+
+    img, textarea, input {
+      transition: transform 0.3s ease;
+    }
+
+    img:hover,
+    textarea:hover,
+    input:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Junaid Shaik</h1>
+    <div class="social-icons">
+      <div class="tooltip">
+        <i class="fab fa-github"></i>
+        <span class="tooltip-text">github.com/yourusername</span>
+      </div>
+      <i class="fab fa-linkedin"></i>
+      <i class="fas fa-envelope"></i>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="about-text">
+      I’m a BTech CSE student at VIT-AP, passionate about web development and software engineering and always excited to build clean, functional websites. I’m currently learning more about frontend technologies and seeking internship opportunities.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+    </div>
+  </section>
+
+  <section id="tools">
+    <h2>Other Tools</h2>
+    <div class="tools-grid">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form" action="https://formspree.io/f/xeozgwna" method="POST" autocomplete="off">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Junaid Shaik. All rights reserved.
+  </footer>
+</body>
+</html>
